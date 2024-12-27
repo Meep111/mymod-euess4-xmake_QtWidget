@@ -1,0 +1,6 @@
+target("mymodGui")
+    add_rules("qt.widgetapp")
+    add_headerfiles("*.h")
+    add_files("*.cpp")
+    add_files("mymodGui.ui")
+    add_files("mymodGui.h")
