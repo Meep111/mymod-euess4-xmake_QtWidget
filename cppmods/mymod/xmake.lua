@@ -2,5 +2,6 @@ local projectName = "mymod"
 
 target(projectName)
     add_rules("ue4ss.mod")
-	add_includedirs("include")
-	add_files("src/dllmain.cpp", "src/mymod.cpp")
+	add_headerfiles("*.h")
+    add_files("*.cpp")
+	add_files("dllmain.cpp", "mymod.cpp")

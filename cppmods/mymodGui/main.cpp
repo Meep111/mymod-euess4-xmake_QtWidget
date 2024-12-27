@@ -49,11 +49,17 @@ class mymodUI : public RC::CppUserModBase
         w = new mymodGui();
         w->show();
         a->exec();
+        w->GuiInit();
+    }
+    
+    auto on_update() -> void override
+    {
+        w->GuiUpdate();
     }
 
     auto on_program_start() -> void override
     {
-       
+        w->GuiStart();
         Output::send<LogLevel::Verbose>(STR("mymodGui have started\n"));
     }
 
